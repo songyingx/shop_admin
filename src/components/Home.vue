@@ -15,8 +15,6 @@
         <el-menu
           default-active="2"
           class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
@@ -67,12 +65,6 @@ export default {
         .catch(() => {
           this.$message.info('取消退出')
         })
-    },
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath)
     }
   }
 }
@@ -116,6 +108,10 @@ export default {
   }
   .el-aside {
     background-color: #545c64;
+
+    .el-submenu {
+      width: 200px;
+    }
   }
   .el-main {
     background-color: #d4dfe4;
